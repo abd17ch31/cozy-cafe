@@ -645,6 +645,468 @@
     }
 
     /* ═══════════════════════════════════════════
+       HERO SECTION 4 – content card (image left, text right)
+    ═══════════════════════════════════════════ */
+    .hero-4 {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      background-image: url('components/images/hero%204%20bg%20img.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: #c4a574;
+      padding: clamp(48px, 6vw, 72px) 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-4__card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 960px;
+      width: 100%;
+      min-height: 420px;
+      background: linear-gradient(165deg, #f8f2e8 0%, #f0e9dc 100%);
+      border-radius: 20px;
+      box-shadow: 0 8px 40px rgba(45, 30, 20, 0.18), 0 4px 16px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+    }
+    .hero-4__card-media {
+      position: relative;
+      min-height: 280px;
+    }
+    .hero-4__card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      border-radius: 20px 0 0 20px;
+    }
+    .hero-4__card-body {
+      padding: clamp(28px, 4vw, 44px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .hero-4__card-title {
+      font-family: var(--font-hero);
+      font-size: clamp(1.6rem, 2.8vw, 2rem);
+      font-weight: 400;
+      color: var(--coffee-brown);
+      letter-spacing: 0.02em;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 10px;
+      margin-bottom: 16px;
+    }
+    .hero-4__card-title-underline {
+      display: block;
+      width: 55%;
+      max-width: 160px;
+      margin-top: 2px;
+    }
+    .hero-4__card-title-underline svg {
+      width: 100%;
+      height: 6px;
+      display: block;
+      overflow: visible;
+    }
+    .hero-4__card-title-underline path {
+      fill: none;
+      stroke: var(--coffee-brown);
+      stroke-width: 1.2;
+      stroke-linecap: round;
+      opacity: 0.85;
+    }
+    .hero-4__card-text {
+      font-family: var(--font-hero);
+      font-size: clamp(1rem, 1.4vw, 1.15rem);
+      font-weight: 400;
+      color: var(--muted-brown);
+      line-height: 1.6;
+      letter-spacing: 0.02em;
+      margin-bottom: 28px;
+    }
+    .hero-4__features {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .hero-4__feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .hero-4__feature-icon {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+    }
+    .hero-4__feature-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .hero-4__feature-content h4 {
+      font-family: var(--font-hero);
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: var(--coffee-brown);
+      letter-spacing: 0.02em;
+      margin-bottom: 2px;
+    }
+    .hero-4__feature-content p {
+      font-family: var(--font-hero);
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: var(--muted-brown);
+      line-height: 1.4;
+      opacity: 0.92;
+    }
+    @media (max-width: 768px) {
+      .hero-4__card {
+        grid-template-columns: 1fr;
+        max-width: 520px;
+      }
+      .hero-4__card-media {
+        min-height: 240px;
+      }
+      .hero-4__card-media img {
+        border-radius: 20px 20px 0 0;
+      }
+    }
+
+    /* ═══════════════════════════════════════════
+       SECTION 5 – Contact & Socials
+    ═══════════════════════════════════════════ */
+    .hero-5 {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      background-image: url('components/images/hero 5 bg image.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: #5a4a3a;
+      padding: clamp(48px, 6vw, 72px) 24px clamp(56px, 8vw, 88px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-5__overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(245, 237, 224, 0.5);
+      pointer-events: none;
+    }
+    .hero-5__inner {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero-5__title-wrap {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+    .hero-5__title {
+      font-family: var(--font-hero);
+      font-size: clamp(1.75rem, 3.2vw, 2.25rem);
+      font-weight: 700;
+      color: var(--coffee-brown);
+      letter-spacing: 0.02em;
+      display: inline-block;
+      padding-bottom: 10px;
+    }
+    .hero-5__title-underline {
+      display: block;
+      width: 50%;
+      max-width: 140px;
+      margin: 0 auto;
+      margin-top: 2px;
+    }
+    .hero-5__title-underline svg {
+      width: 100%;
+      height: 6px;
+      display: block;
+      overflow: visible;
+    }
+    .hero-5__title-underline path {
+      fill: none;
+      stroke: var(--coffee-brown);
+      stroke-width: 1.2;
+      stroke-linecap: round;
+      opacity: 0.85;
+    }
+    .hero-5__contact {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+    .hero-5__contact-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .hero-5__contact-icon {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      color: var(--coffee-brown);
+    }
+    .hero-5__contact-icon svg {
+      width: 100%;
+      height: 100%;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+    }
+    .hero-5__contact-text {
+      font-family: var(--font-hero);
+      font-size: clamp(1rem, 1.3vw, 1.12rem);
+      font-weight: 600;
+      color: var(--coffee-brown);
+      letter-spacing: 0.02em;
+    }
+    .hero-5__buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 36px;
+    }
+    .hero-5__btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border-radius: 50px;
+      border: 1.5px solid var(--coffee-brown);
+      background: rgba(248, 242, 232, 0.92);
+      color: var(--coffee-brown);
+      font-family: var(--font-hero);
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      box-shadow: 0 2px 12px rgba(45, 30, 20, 0.1);
+      transition: background 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+    }
+    .hero-5__btn:hover {
+      background: rgba(240, 232, 218, 0.98);
+      box-shadow: 0 4px 16px rgba(45, 30, 20, 0.15);
+      transform: translateY(-1px);
+    }
+    .hero-5__btn-icon {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+    }
+    .hero-5__btn-icon svg {
+      width: 100%;
+      height: 100%;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+    }
+    .hero-5__social-wrap {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .hero-5__social-title {
+      font-family: var(--font-hero);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--coffee-brown);
+      letter-spacing: 0.03em;
+      margin-bottom: 14px;
+    }
+    .hero-5__social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+    .hero-5__social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(248, 242, 232, 0.9);
+      border: 1.5px solid rgba(61, 35, 20, 0.35);
+      color: var(--coffee-brown);
+      transition: background 0.25s ease, transform 0.2s ease;
+    }
+    .hero-5__social-link:hover {
+      background: rgba(240, 232, 218, 0.98);
+      transform: translateY(-2px);
+    }
+    .hero-5__social-link svg {
+      width: 22px;
+      height: 22px;
+    }
+    .hero-5__hours {
+      text-align: center;
+      padding-top: 24px;
+      border-top: 1px solid rgba(61, 35, 20, 0.2);
+    }
+    .hero-5__hours-title {
+      font-family: var(--font-hero);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--coffee-brown);
+      letter-spacing: 0.03em;
+      margin-bottom: 12px;
+    }
+    .hero-5__hours-list {
+      font-family: var(--font-hero);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--coffee-brown);
+      line-height: 1.6;
+      letter-spacing: 0.02em;
+    }
+    @media (max-width: 768px) {
+      .hero-5__inner {
+        text-align: center;
+      }
+      .hero-5__contact-row {
+        justify-content: center;
+      }
+      .hero-5__buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      .hero-5__btn {
+        justify-content: center;
+      }
+    }
+
+    /* ═══════════════════════════════════════════
+       FOOTER – minimal, warm, Studio Ghibli–inspired
+    ═══════════════════════════════════════════ */
+    .site-footer {
+      background: linear-gradient(180deg, #e8dfd4 0%, #ddd4c8 50%, #d4cbbe 100%);
+      padding: clamp(28px, 4vw, 40px) 24px 20px;
+      font-family: var(--font-hero);
+      color: var(--coffee-brown);
+      position: relative;
+      overflow: hidden;
+    }
+    .site-footer::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    .site-footer__inner {
+      position: relative;
+      z-index: 1;
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px 32px;
+    }
+    .site-footer__brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--coffee-brown);
+    }
+    .site-footer__logo {
+      height: 36px;
+      width: auto;
+      display: block;
+    }
+    .site-footer__name {
+      font-family: var(--font-logo);
+      font-size: 1.35rem;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+    }
+    .site-footer__nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .site-footer__nav a {
+      font-size: 0.98rem;
+      font-weight: 500;
+      color: var(--coffee-brown);
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      transition: opacity 0.2s ease;
+    }
+    .site-footer__nav a:hover {
+      opacity: 0.8;
+    }
+    .site-footer__social {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .site-footer__social a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(61, 35, 20, 0.08);
+      border: 1px solid rgba(61, 35, 20, 0.2);
+      color: var(--coffee-brown);
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+    .site-footer__social a:hover {
+      background: rgba(61, 35, 20, 0.14);
+      transform: translateY(-1px);
+    }
+    .site-footer__social svg {
+      width: 18px;
+      height: 18px;
+    }
+    .site-footer__copy {
+      width: 100%;
+      margin-top: 8px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(61, 35, 20, 0.15);
+      text-align: center;
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--muted-brown);
+      letter-spacing: 0.02em;
+    }
+    @media (max-width: 640px) {
+      .site-footer__inner {
+        flex-direction: column;
+        text-align: center;
+      }
+      .site-footer__brand {
+        justify-content: center;
+      }
+      .site-footer__nav {
+        justify-content: center;
+      }
+      .site-footer__social {
+        justify-content: center;
+      }
+    }
+
+    /* ═══════════════════════════════════════════
        RESPONSIVE – Android / mobile widths
     ═══════════════════════════════════════════ */
 
@@ -1113,6 +1575,134 @@
       </ul>
     </div>
   </section>
+
+  <!-- ════════════════════════════════════════
+       HERO SECTION 4 – Why People Love Cozy Café (card)
+  ════════════════════════════════════════ -->
+  <section class="hero-4" id="hero-4" aria-label="Why People Love Cozy Café">
+    <div class="hero-4__card">
+      <div class="hero-4__card-media">
+        <img src="components/links/image.png" alt="Cozy Café – warm corner" />
+      </div>
+      <div class="hero-4__card-body">
+        <h2 class="hero-4__card-title">Why People Love Cozy Café</h2>
+        <span class="hero-4__card-title-underline" aria-hidden="true">
+          <svg viewBox="0 0 200 8" preserveAspectRatio="none">
+            <path d="M 0 4 Q 50 0 100 4 Q 150 8 200 4" />
+          </svg>
+        </span>
+        <p class="hero-4__card-text">
+          Cozy Café isn’t just about coffee.<br />
+          It’s a warm corner where time slows down,<br />
+          conversations feel lighter, and every cup is served with care.
+        </p>
+        <div class="hero-4__features">
+          <div class="hero-4__feature">
+            <span class="hero-4__feature-icon" aria-hidden="true">
+              <img src="components/images/svgtype1.png" alt="" />
+            </span>
+            <div class="hero-4__feature-content">
+              <h4>Handcrafted Drinks</h4>
+              <p>Brewed fresh, every single time.</p>
+            </div>
+          </div>
+          <div class="hero-4__feature">
+            <span class="hero-4__feature-icon" aria-hidden="true">
+              <img src="components/images/svgtype3.png" alt="" />
+            </span>
+            <div class="hero-4__feature-content">
+              <h4>Calm &amp; Cozy Space</h4>
+              <p>Warm lights, plants, and peaceful music.</p>
+            </div>
+          </div>
+          <div class="hero-4__feature">
+            <span class="hero-4__feature-icon" aria-hidden="true">
+              <img src="components/images/svgtype2.png" alt="" />
+            </span>
+            <div class="hero-4__feature-content">
+              <h4>Friendly Atmosphere</h4>
+              <p>A place that feels like home.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero-5" id="contact" aria-labelledby="hero-5-title">
+    <div class="hero-5__overlay" aria-hidden="true"></div>
+    <div class="hero-5__inner">
+      <div class="hero-5__title-wrap">
+        <h2 class="hero-5__title" id="hero-5-title">Get in Touch</h2>
+        <span class="hero-5__title-underline" aria-hidden="true">
+          <svg viewBox="0 0 120 8" preserveAspectRatio="none"><path d="M2 5 Q60 1 118 5"/></svg>
+        </span>
+      </div>
+      <div class="hero-5__contact">
+        <div class="hero-5__contact-row">
+          <span class="hero-5__contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+          <span class="hero-5__contact-text">+1 234 567 8900</span>
+        </div>
+        <div class="hero-5__contact-row">
+          <span class="hero-5__contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+          <span class="hero-5__contact-text">info@cozycafe.com</span>
+        </div>
+        <div class="hero-5__contact-row">
+          <span class="hero-5__contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <span class="hero-5__contact-text">123 Warm Street, Pleasantville</span>
+        </div>
+      </div>
+      <div class="hero-5__buttons">
+        <a href="tel:+12345678900" class="hero-5__btn">
+          <span class="hero-5__btn-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+          Call Us
+        </a>
+        <a href="mailto:info@cozycafe.com" class="hero-5__btn">
+          <span class="hero-5__btn-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+          Email Us
+        </a>
+        <a href="https://www.google.com/maps/search/123+Warm+Street,+Pleasantville" target="_blank" rel="noopener noreferrer" class="hero-5__btn">
+          <span class="hero-5__btn-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          Get Directions
+        </a>
+      </div>
+      <div class="hero-5__social-wrap">
+        <p class="hero-5__social-title">Follow Us</p>
+        <div class="hero-5__social-icons">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="hero-5__social-link" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="hero-5__social-link" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="hero-5__social-link" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
+        </div>
+      </div>
+      <div class="hero-5__hours">
+        <p class="hero-5__hours-title">Business Hours</p>
+        <p class="hero-5__hours-list">
+          Monday – Friday: 7:00 AM – 7:00 PM<br>
+          Saturday – Sunday: 8:00 AM – 6:00 PM
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="site-footer__inner">
+      <a href="#" class="site-footer__brand" aria-label="Cozy Café – home">
+        <img src="components/links/logo.png" alt="" class="site-footer__logo" />
+        <span class="site-footer__name">Cozy Café</span>
+      </a>
+      <nav class="site-footer__nav" aria-label="Footer navigation">
+        <a href="#hero-4">About</a>
+        <a href="#hero-3">Menu</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="site-footer__social" aria-label="Social media">
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
+      </div>
+      <p class="site-footer__copy">© 2025 Cozy Café. All rights reserved.</p>
+    </div>
+  </footer>
 
   <script>
     (function () {
